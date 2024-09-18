@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Sebenarnya apa yang kamu cari?😿</h1>
+        <button id="changeButton">Pencet saja</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <script>
+
+        const texts = ["Sebenarnya apa yang kamu cari?", "Anw halo nama saya Arifah👋", "Melelahkan jadi mahasiswa sem 5", "tapi semangat ya 😞"];
+        let index = 0;
+
+        $("#changeButton").click(function() {
+            index = (index + 1) % texts.length;
+            $("#title").text(texts[index]);
+        });
+    </script>
+</body>
+</html>
